@@ -2,57 +2,56 @@
 <html lang="zh">
 
 <head>
-    <meta content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"
-        name="viewport" />
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>随机密码生成器</title>
     <meta name="keywords" content="随机密码,随机密码生成器,密码生成">
     <meta name="description" content="随机密码生成器，生成随机密码防止密码泄露">
     <link href="favicon.png" rel="icon" type="image/x-icon">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
-        <h2 class="title fcolor">随机密码生成器</h2>
+        <h2 class="title">随机密码生成器</h2>
         <div class="result">
-            <div class="result__title field-title fcolor">生成的密码</div>
-            <div class="result__info right fcolor">点击复制</div>
-            <div class="result__info left fcolor">复制</div>
-            <div class="result__viewbox fcolor" id="result">点击“生成密码”按钮生成</div>
-            <button id="copy-btn" style="--x: 0; --y: 0"></button>
+            <div class="result__title field-title">生成的密码</div>
+            <div class="result__info right">点击复制</div>
+            <div class="result__info left">复制</div>
+            <div class="result__viewbox" id="result">点击“生成密码”按钮生成</div>
+            <button id="copy-btn" style="--x: 0; --y: 0">
         </div>
-        <div class="length range__slider" data-max="32" data-min="4">
-            <div class="length__title field-title fcolor" data-length='0'>长度：</div>
-            <label for="slider"></label><input id="slider" max="32" min="4" type="range" value="15" />
+        <div class="length range__slider" data-min="4" data-max="32">
+            <div class="length__title field-title" data-length='0'>长度：</div>
+            <input id="slider" type="range" min="4" max="32" value="16" />
         </div>
 
         <div class="settings">
-            <span class="settings__title field-title fcolor">settings</span>
+            <span class="settings__title field-title">settings</span>
             <div class="setting">
-                <input checked id="uppercase" type="checkbox" />
+                <input type="checkbox" id="uppercase" checked />
                 <label for="uppercase">包含大写</label>
             </div>
             <div class="setting">
-                <input checked id="lowercase" type="checkbox" />
+                <input type="checkbox" id="lowercase" checked />
                 <label for="lowercase">包含小写</label>
             </div>
-            <div class="setting ">
-                <input checked id="number" type="checkbox" />
-                <label for="number">包括数字</label>
+            <div class="setting">
+                <input type="checkbox" id="number" checked />
+                <label for="number">包含数字</label>
             </div>
             <div class="setting">
-                <input id="symbol" type="checkbox" />
-                <label for="symbol">包括符号</label>
+                <input type="checkbox" id="symbol" />
+                <label for="symbol">包含字符</label>
             </div>
         </div>
 
-        <button class="btn generate fcolor" id="generate">生成密码</button>
+        <button class="btn generate" id="generate">生成密码</button>
     </div>
 
-    <script src="script.js"></script>
-    <div style="text-align:center;">
-    </div>
+    <script src="js/script.js"></script>
+
 </body>
-<!-- by：https://github.com/wayne0926/sjmm & https://github.com/devloop01/password-generator-->
+<!-- by：https://github.com/devloop01/password-generator-->
 </html>
